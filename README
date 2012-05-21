@@ -1,1 +1,11 @@
-You'll need to change the paths in execute.sh and python-mpi-skeleton.py to get the thing to run.
+Steps to get this running:
+
+1. Log into the cluster.
+2. Run this:
+    git clone git://github.com/wil-langford/austin-game-taxonomy.git
+3. Run this:
+    bash austin-game-taxonomy/utils/cluster-python-environment-setup.sh
+4. (optional) Add $HOME/bin to your PATH in .bash_profile.
+4. cd austin-game-taxonomy
+5. Run this:
+    make run
