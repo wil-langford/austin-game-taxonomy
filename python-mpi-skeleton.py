@@ -13,7 +13,7 @@ if rank == 0:
     BASEDIR = os.path.expanduser('~/austin-game-taxonomy')
     DATADIR = BASEDIR + '/data'
 
-    with open(DATADIR + "/master", 'w') as f:
+    with open(DATADIR + "/master.dat", 'w') as f:
         f.write("my rank is {0}".format(rank))
 
 else:
