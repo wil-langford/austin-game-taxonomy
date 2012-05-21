@@ -1,5 +1,11 @@
 all:
 
+run:
+	qsub execute.sh
+
+watch:
+	watch showq -r
+
 clean:
 	rm -rf execute.sh.[eo]*
 
