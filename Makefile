@@ -11,3 +11,7 @@ clean:
 
 squeaky: clean
 	rm -rf *.pyc data/*.dat
+
+report: 
+	for each in execute.sh.e* ; do echo ---- $$each ---- ; cat $$each ; done
+	for each in execute.sh.o* ; do echo ---- $$each ---- ; cat $$each ; done
