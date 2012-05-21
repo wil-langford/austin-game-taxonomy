@@ -9,3 +9,4 @@ Steps to get this running:
 4. cd austin-game-taxonomy
 5. Run this:
     make run
+    less data/master.dat
