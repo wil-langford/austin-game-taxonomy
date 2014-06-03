@@ -1,5 +1,5 @@
 #!/bin/bash
-/usr/bin/python2.6 virtualenv.py ~
+python virtualenv.py ~
 pip install numpy
 pip install mpi4py
 
