@@ -9,6 +9,11 @@ import numpy as np
 from mpi4py import MPI
 import os
 
+def debug(filename, datadir="/home/wsl/austin-game-taxonomy/data"):
+    fullname = datadir + "/" + filename
+    with open(fullname,"w") as f:
+        f.write("blah blah blah")
+
 comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 
@@ -18,6 +23,8 @@ if rank == 0:
     BASEDIR = os.path.expanduser('~/austin-game-taxonomy')
     DATADIR = BASEDIR + '/data'
     MASTERFILE = DATADIR + '/master.dat'
+
+    debug("masternode")
 
     size = comm.Get_size()
 
@@ -36,6 +43,8 @@ if rank == 0:
 else:
     # I am a minion node!
     print "worker {0}".format(rank)
+
+    debug("workernode{}".format(rank))
 
     R = np.zeros([2, 2])
     comm.Recv(R, source=0, tag=rank)
