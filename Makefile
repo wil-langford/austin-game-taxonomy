@@ -1,7 +1,7 @@
 all:
 
 run:
-	qsub execute.sh
+	qsub -N atax_job -j oe execute.sh
 
 watch:
 	watch showq -r
